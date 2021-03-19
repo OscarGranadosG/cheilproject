@@ -28,7 +28,7 @@ const NewHotel = () => {
                 const dataCities = await dataCity();
                 setcities(dataCities.data.cities);    
             } catch (error) {
-                
+                console.log(error)   
             }
         }
         getCities();
@@ -73,7 +73,7 @@ const NewHotel = () => {
     return (  
         <div className="row justify-content-center">
             <div className="col-md-8">
-                <div className="card">
+                <div className="card shadow p-3 mb-5 bg-white rounded">
                     <div className="card-body">
                         <h2 className="text-center mb-4 font-weight-bold">
                             Crear Hotel

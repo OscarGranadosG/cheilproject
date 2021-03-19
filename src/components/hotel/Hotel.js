@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
-import EditHotel from './EditHotel';
 
 const Hotel = ({hotel, deleteHotelId}) => {
 
@@ -35,10 +34,10 @@ const Hotel = ({hotel, deleteHotelId}) => {
 
     return (
         <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div className="card">
-                <img className="card-img-top" src="https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg"></img>
+            <div className="card shadow border-secondary rounded ">
+                <img className="card-img-top" src={"https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg"} alt=""></img>
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
+                    <h5 className="card-title text-info text-uppercase">{name}</h5>
                     <p className="card-text">{description}</p>
                     <h6 className="card-text">Telefono: {phone}</h6>
                     <h6 className="card-text">Dirección: {address}</h6>

@@ -18,10 +18,10 @@ const Hotels = () => {
                 console.log(error);
             }
         }
-
         getHotelsData();
 
     }, [])
+
 
     const deleteHotelId = id => {
         try {
@@ -30,8 +30,11 @@ const Hotels = () => {
             sethotels(newHotel); 
         } catch (error) {
             console.log(error);
-        } 
+        }
     }
+
+    if(hotels.length === 0) return <h5>!!No hay hoteles, empieza creando uno¡¡</h5>
+    
 
     return (  
         <div className="col-12 row">

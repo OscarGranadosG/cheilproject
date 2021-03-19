@@ -23,13 +23,15 @@ const getHotel = async (id) => {
     return await axios.get(`${URL}/hotels/${id}/edit`)
 }
 
-
-
+const updateHotel = async ( {hotel}, id ) => {
+    return await axios.put(`${URL}/hotels/${id}`, hotel)
+}
 
 export {
     dataHotels,
     createHotel,
     dataCity,
     deleteHotel,
-    getHotel
+    getHotel,
+    updateHotel
 }
