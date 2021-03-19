@@ -15,10 +15,16 @@ const dataCity = async () => {
     return await axios.get(`${URL}/cities`);
 }
 
+const deleteHotel = async (id) => {
+    return await axios.delete(`${URL}/hotels/${id}`);
+}
+
+
 
 
 export {
     dataHotels,
     createHotel,
-    dataCity
+    dataCity,
+    deleteHotel
 }

@@ -1,17 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 
-import { dataHotels } from '../actions/api';
+import { dataHotels, deleteHotel } from '../actions/api';
+import Hotel from './Hotel';
+
 
 const Hotels = () => {
+
+    const [hotels, sethotels] = useState([]);
 
     useEffect(() => {
         
         const getHotelsData = async () => {
             try {
                 const req = await dataHotels();
-                console.log(req.data.hotels);
+                sethotels(req.data.hotels);
             } catch (error) {
-                
+                console.log(error);
             }
         }
 
@@ -19,8 +23,27 @@ const Hotels = () => {
 
     }, [])
 
+    const deleteHotelId = id => {
+        try {
+            deleteHotel(id);
+            const newHotel = hotels.filter(hotel => hotel.id !== id); 
+            sethotels(newHotel); 
+        } catch (error) {
+            console.log(error);
+        } 
+    }
+
     return (  
-        <h1>Desde Hotel</h1>
+        <div className="col-12 row">
+            {hotels.map(hotel=>(
+                <Hotel 
+                    key={hotel.id}
+                    hotel= {hotel}
+                    deleteHotelId={deleteHotelId}
+                />
+            ))}
+            
+        </div>
     );
 }
  
