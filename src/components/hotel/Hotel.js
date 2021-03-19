@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
-
-//import { deleteHotel } from '../actions/api';
-
+import EditHotel from './EditHotel';
 
 const Hotel = ({hotel, deleteHotelId}) => {
 
-    const { id, name, phone, address, description, city_id} = hotel;
+    const { id, name, phone, address, description } = hotel;
 
     const submitDelete = id => {
         Swal.fire({
@@ -50,7 +48,7 @@ const Hotel = ({hotel, deleteHotelId}) => {
                             className="btn btn-danger mt-2" 
                             onClick={ () => submitDelete(id) }>
                         Borrar</button>      
-                        <Link to={'/create'} className="btn btn-primary d-block d-md-inline-block mx-2 mt-2">
+                        <Link to={`/edit/${id}`} className="btn btn-primary d-block d-md-inline-block mx-2 mt-2">
                             Editar
                         </Link>
                     </div>                   

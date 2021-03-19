@@ -19,6 +19,10 @@ const deleteHotel = async (id) => {
     return await axios.delete(`${URL}/hotels/${id}`);
 }
 
+const getHotel = async (id) => {
+    return await axios.get(`${URL}/hotels/${id}/edit`)
+}
+
 
 
 
@@ -26,5 +30,6 @@ export {
     dataHotels,
     createHotel,
     dataCity,
-    deleteHotel
+    deleteHotel,
+    getHotel
 }
