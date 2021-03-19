@@ -10,7 +10,7 @@
 
 5. Verificar que en nuestro proyecto backend tengamos la url: APP_URL=http://cheilapi.test y que sea igual a la que tenemos en src\components\actions\api.js URL
 
-![Alt text](public\images\index.PNG?raw=true "Interfaz index")
-![Alt text](public\images\crear_hotel.PNG?raw=true "Interfaz crear hotel")
-![Alt text](public\images\editar_hotel.PNG?raw=true "Interfaz editar hotel")
-![Alt text](public\images\borrar_hotel.PNG?raw=true "Interfaz borrar hotel")
+![Screenshot](https://github.com/OscarGranadosG/cheilproject/blob/master/public/images/index.PNG)
+![Screenshot](https://github.com/OscarGranadosG/cheilproject/blob/master/public/images/crear_hotel.PNG)
+![Screenshot](https://github.com/OscarGranadosG/cheilproject/blob/master/public/images/editar_hotel.PNG)
+![Screenshot](https://github.com/OscarGranadosG/cheilproject/blob/master/public/images/borrar_hotel.PNG)
